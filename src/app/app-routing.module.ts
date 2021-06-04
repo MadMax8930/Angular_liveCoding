@@ -14,9 +14,7 @@ const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'home', component: HomeComponent},
     { path: 'features', component: FeaturesComponent},
-    { path: 'features/:name', component: OneFeatureComponent, children: [
-      { path: 'detail', component: DetailFeatureComponent, pathMatch:'full'}
-    ]},
+    { path: 'features/:id', component: OneFeatureComponent},
     { path: 'not-found', component: OhFourComponent},
     { path:'**', redirectTo:'/not-found'}
   ]}

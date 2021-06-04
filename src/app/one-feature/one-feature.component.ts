@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { FeaturesService } from '../services/features.service';
 
 @Component({
   selector: 'app-one-feature',
@@ -8,13 +9,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class OneFeatureComponent implements OnInit {
   // nameFeature? : string;
-  nameFeature : string | undefined;
+  // nameFeature : string | undefined;
+  feature: any;
+
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private featuresService: FeaturesService
   ) { }
 
   ngOnInit(): void {
-    this.nameFeature = this.route.snapshot.params['name'];
+    const id = this.route.snapshot.params['id'];
+    const dataFeature = this.featuresService.features.slice();
+    this.feature = dataFeature.find( f => f.id == id);
+    console.log(this.feature);
   }
 
 }

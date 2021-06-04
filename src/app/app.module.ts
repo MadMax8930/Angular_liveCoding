@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { OhFourComponent } from './oh-four/oh-four.component';
 import { OneFeatureComponent } from './one-feature/one-feature.component';
 import { DetailFeatureComponent } from './detail-feature/detail-feature.component';
+import { FeaturesService } from './services/features.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import { DetailFeatureComponent } from './detail-feature/detail-feature.componen
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    FeaturesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

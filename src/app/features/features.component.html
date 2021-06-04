@@ -1,1 +1,7 @@
-<p>features works!</p>
+<ul>
+  <li *ngFor="let feature of dataFeature">
+    <div>Name : {{ feature.name }} </div>
+    <p>Description : {{ feature.description }} </p>
+    <a [routerLink]="[feature.id]">Details</a>
+  </li>
+</ul>
