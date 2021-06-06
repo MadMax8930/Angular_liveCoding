@@ -28,6 +28,7 @@ export class FeaturesComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.featureSubscription?.unsubscribe();
+    console.log('Destroy component feature');
   }
 
 }
