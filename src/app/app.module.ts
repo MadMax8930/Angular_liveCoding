@@ -14,6 +14,7 @@ import { OneFeatureComponent } from './one-feature/one-feature.component';
 import { DetailFeatureComponent } from './detail-feature/detail-feature.component';
 import { FeaturesService } from './services/features.service';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     FeaturesService
