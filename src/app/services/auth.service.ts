@@ -19,6 +19,7 @@ export class AuthService {
       map(
         (resp: any) => {
           localStorage.setItem('TOKEN_APPLI', resp.token);
+          console.log('Token Save');
           return resp;
         }
       )
