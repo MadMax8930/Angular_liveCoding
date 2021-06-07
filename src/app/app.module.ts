@@ -13,8 +13,6 @@ import { OhFourComponent } from './oh-four/oh-four.component';
 import { OneFeatureComponent } from './one-feature/one-feature.component';
 import { DetailFeatureComponent } from './detail-feature/detail-feature.component';
 import { FeaturesService } from './services/features.service';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,9 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+    AppRoutingModule
   ],
   providers: [
     FeaturesService
